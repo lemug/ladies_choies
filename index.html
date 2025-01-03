@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #8B5A2B, #D2B48C); 
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: #D2B48C;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 380px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .login-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 50px;
+            color: #704214;
+          
+        }
+
+        .login-container p {
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        form {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            color: #704214;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #704214;
+            border-radius: 8px;
+            background-color: #FAF0E6;
+            transition: all 0.3s ease;
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #8B5A2B;
+            outline: none;
+            box-shadow: 0 0 10px rgba(139, 90, 43, 0.3);
+        }
+
+        button {
+            background-color: #704214;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            width: 100%;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #8B5A2B;
+            transform: translateY(-2px);
+            
+        }
+
+        .signup-link {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #704214;
+        }
+
+        .signup-link a {
+            text-decoration: none;
+            color: #8B5A2B;
+            font-weight: bold;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <div class="login-container">
+        <h1 ><img src="b6296b9d-4d14-4427-9d2f-7a504414eaa1.webp" style="width: 100px; margin-right: 20px; ">ladies choies</h1>
+        <p>Welcome back to Ladies Choice Luxury Bags</p>
+        <form id="loginForm">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit"><a href="ladies.html" style="text-decoration: none; ">Log In</a></button>
+        </form>
+
+        <div class="signup-link">
+            <p>Don't have an account? <a href="sign up .html">Sign up here</a></p>
+        </div>
+    </div>
+
+    
+</body>
+</html>

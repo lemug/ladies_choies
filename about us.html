@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #8B5A2B, #D2B48C);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: 50px;
+            color: #704214;
+            margin: 20px 0;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #704214;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #D2B48C;
+            min-width: 160px;
+            z-index: 1;
+            text-align: left;
+            padding: 10px 0;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #704214;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #8B5A2B;
+            color: white;
+        }
+
+        .main-card {
+            width: 80%;
+            background: #D2B48C;
+            border-radius: 12px;
+            perspective: 1000px;
+            margin: 2rem 0;
+        }
+
+        .main-card-inner {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .main-card:hover .main-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .main-card .front, 
+        .main-card .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-card .front {
+            background: #D2B48C;
+            color: #333;
+        }
+
+        .main-card .back {
+            background: #8B5A2B;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .small-cards {
+        display: flex;
+        gap: 3rem; 
+        justify-content: center;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+
+        .small-card {
+            width: 250px;
+            height: 250px;
+            background: #D2B48C;
+            border-radius: 12px;
+            perspective: 1000px;
+        }
+
+        .small-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .small-card:hover .small-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .small-card .front,
+        .small-card .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .small-card .front {
+            background: #D2B48C;
+            color: #333;
+        }
+
+        .small-card .back {
+            background: #8B5A2B;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #704214;
+            color: white;
+            margin-top: 2rem;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <div class="title"><img src="b6296b9d-4d14-4427-9d2f-7a504414eaa1.webp" style="width: 95px; margin-right: 25px; margin-top: 30px;">Ladies Choies</div>
+
+    <nav>
+        <a href="ladies.html">Home</a>
+        <a href="about us.html">About Us</a>
+        <a href="coonectus.html">Contact Us</a>
+        <a href="log out.html">Log Out</a>
+
+        
+        <div class="dropdown">
+            <a href="#">Menu</a>
+            <div class="dropdown-content">
+                <a href="lv page.html">LV </a>
+                <a href="dior.html">DIOR</a>
+                <a href="chanel.html">CHANEL</a>
+                <a href="YSL.html">YSl</a>
+                
+                
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <h2 style="font-family: 'Pacifico', cursive;  color: #582e05 ;word-wrap:10px; letter-spacing: 2px; margin: 30px; font-size:50px;">About Us</h2>
+    </div>
+    <div class="main-card">
+       
+           
+            
+        <div class="main-card-inner">
+            <div class="front">
+                
+                <p style="font-size: 120%;">Hello ladies, we offer you a world of luxury bags from several international brands of bags that can suit your high taste 
+                     <br> (If there are any problems, suggestions or even to ask for help, please go to the contact us page) </p>
+            </div>
+            <div class="back">
+                <h2>More About Us</h2>
+                <p>We, the HTML students of <u><b>Dr. Iman Abu Maria</b></u> , decided to do this project to facilitate the currency of women choosing their bags in addition to knowing some details about them <br> (price, colors, exterior, interior, side, type of fabrics, etc...)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="small-cards">
+        <div class="small-card">
+            <div class="small-card-inner">
+                <div class="front">
+                   <img src="about us/219da73e-8cdb-426b-9c8a-9287e41267d6.webp" style="height: auto; width: 100%;">
+                </div>
+                <div class="back">
+                    <p>Name : AbdelMajeed Nasser Hessian  <br>
+                        ID Student : 202311489<br>
+                        University Specialization : Computer Science  <br>
+                    Age : 19 y<br>
+                Birthday : 25/2/2005</p>
+                </div>
+            </div>
+        </div>
+        <div class="small-card">
+            <div class="small-card-inner">
+                <div class="front">
+                    <img src="about us/3b678408-0e82-4970-9592-e123cf1ff749.webp" style="height: auto; width: 100%;">
+                </div>
+                <div class="back">
+                    <p>Name : Mohammad Khaled humouda <br>
+                        ID Student : 202313290<br>
+                        University Specialization : Computer Science  <br>
+                    Age : 19 y <br>
+                Birthday : 15/4/2005</p>
+                </div>
+            </div>
+        </div>
+        <div class="small-card">
+            <div class="small-card-inner">
+                <div class="front">
+                     <img src="about us/0370c838-5398-461a-82d9-54ec17495c9b.webp" style="height: auto; width: 100%;">
+                </div>
+                <div class="back">
+                    <p>Name : Leyan Haitham  Mugdadi <br>
+                    ID Student : 202310768<br>
+                    University Specialization : Software Engineering <br>
+                Age : 19 y <br>
+            Birthday : 1/4/2005 </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ladies Choices. All rights reserved.</p>
+    </footer>
+</body>
+</html>

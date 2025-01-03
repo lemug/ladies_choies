@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Out</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #8B5A2B, #D2B48C);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            padding-top: 120px; /* المسافة من أعلى الصفحة */
+        }
+
+        header {
+            width: 100%;
+            background-color: #704214;
+            padding: 1rem 0;
+            text-align: center;
+            position: absolute;
+            top: 0;
+        }
+
+        header a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .logout-container {
+            text-align: center;
+            background: #D2B48C;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            margin: 20px auto; /* مسافات متساوية من الأعلى والأسفل */
+        }
+
+        .logout-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: #704214;
+            margin-bottom: 1rem;
+        }
+
+        .logout-message {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .logout-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .logout-buttons a {
+            background-color: #704214;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-buttons a:hover {
+            background-color: #8B5A2B;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #704214;
+            color: white;
+            width: 100%;
+            margin-top: auto; /* يدفع الفوتر لأسفل */
+        }
+
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: 70px;
+            color: #704214;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #D2B48C;
+            min-width: 160px;
+            z-index: 1;
+            text-align: left;
+            padding: 10px 0;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #704214;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #8B5A2B;
+            color: white;
+        }
+
+        hr {
+            width: 90%;
+            border: 1px solid #8B5A2B;
+            margin-top: 0.5rem;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #704214;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px; /* مسافة أسفل القائمة */
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <div class="title" style="margin:20px;">
+        <img src="b6296b9d-4d14-4427-9d2f-7a504414eaa1.webp" style="width: 95px; margin-right: 25px; margin-top: 30px;">
+        Ladies Choices
+    </div>
+    <hr> 
+
+    <nav>
+        <a href="ladies.html">Home</a>
+        <a href="about us.html">About Us</a>
+        <a href="coonectus.html">Contact Us</a>
+        <a href="log out.html">Log Out</a>
+
+        
+        <div class="dropdown">
+            <a href="#">Menu</a>
+            <div class="dropdown-content">
+                <a href="lv page.html">LV </a>
+                <a href="dior.html">DIOR</a>
+                <a href="chanel.html">CHANEL</a>
+                <a href="YSL.html">YSl</a>
+                
+                
+            </div>
+        </div>
+    </nav>
+
+    <main class="logout-container">
+        <h1 class="logout-title">Logged Out</h1>
+        <p class="logout-message">You have successfully logged out of your account.</p>
+        <div class="logout-buttons">
+            <a href="login.html">Log In Again</a>
+            <a href="ladies.html">Go to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ladies Choices. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

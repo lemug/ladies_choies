@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv collection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #8B5A2B, #D2B48C);
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 3rem;
+        }
+
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: 70px;
+            color: #704214;
+            margin-top: 35px;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #704214;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+      
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #D2B48C;
+            min-width: 160px;
+            z-index: 1;
+            text-align: left;
+            padding: 10px 0;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #704214;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #8B5A2B;
+            color: white;
+        }
+
+        hr {
+            width: 90%;
+            border: 1px solid #8B5A2B;
+            margin-top: 0.5rem;
+            margin-bottom: 30px;
+        }
+
+        .products-section {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .products-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #8B5A2B;
+        }
+
+        .product-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #D2B48C;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 90%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin: 1rem 0;
+            color: #8B5A2B;
+            font-size: 1.8rem;
+        }
+
+        .product-card p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #704214;
+            font-size: 1.2rem;
+        }
+
+        .image-gallery {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .gallery-image.active {
+            display: block;
+        }
+
+        .image-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .image-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+        }
+
+        .image-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #704214;
+            color: white;
+            margin-top: 3rem;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <div class="title"><img src="b6296b9d-4d14-4427-9d2f-7a504414eaa1.webp" style="width: 95px; margin-right: 25px; margin-top: 30px;">Ladies Choies</div>
+    <hr> 
+
+    <nav>
+        <a href="ladies.html">Home</a>
+        <a href="about us.html">About Us</a>
+        <a href="coonectus.html">Contact Us</a>
+        <a href="log out.html">Log Out</a>
+
+        
+        <div class="dropdown">
+            <a href="#">Menu</a>
+            <div class="dropdown-content">
+                <a href="lv page.html">LV </a>
+                <a href="dior.html">DIOR</a>
+                <a href="chanel.html">CHANEL</a>
+                <a href="YSL.html">YSl</a>
+                
+                
+            </div>
+        </div>
+    </nav>
+
+   
+    <section class="products-section">
+        <h2 style="font-family: 'Pacifico', cursive;  color: #582e05 ;word-wrap:10px; letter-spacing: 2px; margin: 30px;"><img src="lv/d2ac54d1-8747-4bb9-ad64-8a4e780d3167 copy.webp" style="width:50px; margin-right: 5px; margin-top: 5px;">THE LOUIS VUITTON COLLECTION</h2>
+        <div class="product-cards">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/alma bb/4472d2a0-2f85-41c4-bbe6-2cd670c4d29f (2).webp" alt="Product 1" class="gallery-image active">
+                    <img src="lv/alma bb/421d1360-7a8c-4ced-a083-7a8297bba549.webp" alt="Product 1" class="gallery-image">
+                    <img src=" lv/alma bb/fbeee1e9-5047-40c6-8959-dcf33ddf0a64.webp" alt="Product 1" class="gallery-image">
+                </div>
+                <h3>Alma BB</h3>
+                <p>The Alma BB handbag traces its pedigree to the Art Deco original, introduced in 1934. Signature details impart a timeless elegance to this model made from graphic Damier Ebene canvas: note the golden padlock and keys, twin Toron handles and chic leather key bell. Equipped with a removable and adjustable strap, this charming small bag is perfect for cross-body wear.<br>
+                     <br>
+                    17.5 x 11.5 x 23.5 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">7,350 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/bundle/4747778b-4f13-4974-823b-0a79f7412846.webp" alt="Product 2" class="gallery-image active">
+                    <img src="lv/bundle/10bcb202-6be4-44cb-b8fa-3cc28c243902.webp" alt="Product 2" class="gallery-image">
+                    <img src="lv/bundle/c8253462-9a73-45c1-b03d-b6df35b9648a.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>Bundle</h3>
+                <p>The LV Bundle bag is made from Monogram Empreinte leather with gold-color hardware, including on the chain drawstring. This “day to evening” bag’s sleek lines will match almost any summer outfit. It has two handles for fashionable hand carry as well as an adjustable and removable strap for comfortable cross-body and shoulder wear.<br>
+<br>
+                    28 x 20 x 11.5 cm
+                    (Length x Height x Width)</p>
+                <p class="price">11,300 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/christopher mm/d682018f-f000-464e-916a-d20b26569a6f.webp" alt="Product 2" class="gallery-image active">
+                    <img src="lv/christopher mm/b954a920-4419-4cb2-b880-a0e346267a00.webp" alt="Product 2" class="gallery-image">
+                    <img src="lv/christopher mm/2eeb0b92-fe2d-4ca3-91e8-1b98a43e1767.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>The Christopher MM</h3>
+                <p>The Christopher MM backpack reinvents the rugged spirit of a hiking pack in masculine Monogram Eclipse canvas and Monogram Eclipse Reverse canvas with black leather trim. The grays and blacks are complemented by the silver highlights of the buckles and zips. Multiple pockets and a leather flap with a press-stud keep belongings safe.<br>
+                    <br>
+                    44 x 12.5 x 38 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">13,200 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/discovery backpack pm/44297067-43c7-47d0-a0f5-3b50158978ea.webp" alt="Product 2" class="gallery-image active">
+                    <img src="lv/discovery backpack pm/7650c763-7af1-41fd-92e6-84dc59727234.webp" alt="Product 2" class="gallery-image">
+                    <img src="lv/discovery backpack pm/0ec1d189-6e73-4864-8d12-91ddc1374580.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>Discovery Backpack PM</h3>
+                <p> Made from Monogram Eclipse canvas, the Discovery Backpack PM is the slightly smaller of the two Discovery backpacks. But it’s just as versatile. The outside pockets, front zipped pocket, and open pockets on the two sides, mean it’s easy to get at essentials. Inside pockets keep things organized.
+                  <br><br>
+                    38 x 20 x 29 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">10,500 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 5-->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/duffle bag55/acc2a2d5-b623-4b83-9fae-140031f8fbef.webp" alt="Product 2" class="gallery-image active">
+                    <img src="lv/duffle bag55/21299511-a949-4a74-8d62-67bb07a43c07.webp" alt="Product 2" class="gallery-image">
+                    <img src="lv/duffle bag55/4795ae9c-f35d-460c-a398-63661c0db876.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>Duffle bag 55</h3>
+                <p>An icon since the appearance in 1930, the Keepall embodies the spirit of modern travel. Light, supple and always ready for immediate departure, the bag lives up to its name: those adept at the art of packing can easily fit a week's wardrobe into the generously sized (and cabin-friendly) Keepall 55. Shown here in classic Monogram Canvas, with a strap for casual cross-body wear
+                   <br><br>
+                    31 x 26 x 55 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">9,305 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/horizon 55/b6536eb2-647b-442e-85c7-ab05aaaa2cb3.webp" alt="Product 2" class="gallery-image active">
+                    <img src="lv/horizon 55/70e8e546-5282-4067-956e-c59a2426869d.webp" alt="Product 2" class="gallery-image">
+                    <img src="lv/horizon 55/3baf7bdc-82c9-490d-a987-ffaaa33b4295.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>Horizon 55</h3>
+                <p>Meet the future of luxurious rolling luggage. Imagined by Marc Newson, widely acknowledged as the most influential industrial designer of his generation, this lightweight 4-wheeled carry-on has a completely flat interior thanks to its large external cane. Every detail exudes innovation and lightness: from the discreet new TSA lock to the most comfortable wheels ever designed by Louis Vuitton. Travel in style with your Horizon 55, which offers surprisingly large interior capacity for a cabin-friendly bag.
+                    <br><br>
+                    55 x 21 x 38 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">13,200 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/Neverfull bandouliere/cae753ee-cc13-403b-b587-44512c658a38.webp" alt="Product 2" class="gallery-image active">
+                    <img src="lv/Neverfull bandouliere/7ed7a67f-23b2-414a-8521-ee5eb7a6abb3.webp" alt="Product 2" class="gallery-image">
+                    <img src="lv/Neverfull bandouliere/05ce0748-53a7-43df-99ee-561ee98625d3.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>Neverfull Bandoulière Inside Out BB</h3>
+                <p>This season, the iconic Neverfull handbag is made reversible. The Bandoulière Inside Out BB edition is crafted from signature Monogram canvas with grained leather on the reverse. It comes with a removable zipped pouch that can be used on its own, or attached as an exterior pocket. Gleaming gold-toned hardware adds the final touch. It also features a removable strap that allows for crossbody carry.
+                   <br><br>
+                    16.5 x 11 x 26.5 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">10,400 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/pre-owned nano noe/50fe94ac-6bc0-481f-980d-657e08441565.webp" alt="Product 3" class="gallery-image active">
+                    <img src="lv/pre-owned nano noe/9bf6577f-9493-4cc1-8879-48d480ea1aea.webp" alt="Product 3" class="gallery-image">
+                    <img src="lv/pre-owned nano noe/56724d43-8510-4cf0-8e7a-6c2b269580fd.webp" alt="Product 3" class="gallery-image">
+                </div>
+                <h3>Nano Noé</h3>
+                <p>This bicolor version of the Nano Noé is crafted from supple Monogram Empreinte leather, embossed with the Monogram pattern. This miniature replica of the iconic Noé bag is a stylish way to carry everyday essentials. In addition to its practical drawstring closure, it features a removable handle and a removable, adjustable shoulder strap for different carry options.
+                    <br><br>
+                    13 x 16 x 10 cm
+                    (Length x Height x Width)</p>
+                <p class="price">6,800 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/sunset/cabb150d-679c-4e1f-8907-05153f554245.webp" alt="Product 4" class="gallery-image active">
+                    <img src="lv/sunset/85453401-260b-47cf-8b46-34765a9e2ee8.webp" alt="Product 4" class="gallery-image">
+                    <img src="lv/sunset/a1c94a27-3eef-46db-8191-b715a8f445d4.webp" alt="Product 4" class="gallery-image">
+                </div>
+                <h3> The Sunset</h3>
+                <p>The Sunset handbag is made from Monogram Denim canvas and is adorned with the House's tuck lock. Creating Monogram Denim is a multi-step process. First the Monogram pattern is woven into the Global Organic Textile Standard-certified cotton which is then bleached. Once assembled, each bag is stonewashed to give it a unique aspect. The Sunset can also be styled for cross-body wear, thanks to an extra extension strap included with the piece.
+                      <br><br>
+                    18 x 3 x 27 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">1,893 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/vendome mm/4b8d7e4f-6d16-4201-9a26-053b351a25ab.webp" alt="Product 4" class="gallery-image active">
+                    <img src="lv/vendome mm/2986c2ee-e5df-42a4-b2d6-e3db18769c87.webp" alt="Product 4" class="gallery-image">
+                    <img src="lv/vendome mm/dcef21a8-bbee-460e-9d04-c86d527236b9.webp" alt="Product 4" class="gallery-image">
+                </div>
+                <h3>Vendôme MM</h3>
+                <p>Sophisticated and functional, the Vendôme MM bag presents a refined mix of grained Taurillon leather and smooth calfskin, with gold-finish buckles and hardware. Emblematic House touches include a padlock, key bell and a hot-stamped Louis Vuitton signature. Fitted with articulated top handles and a detachable strap, the tote offers a variety of carry options.
+                     <br><br>
+                    29 x 15 x 36 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">4,008 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/Keepall Bandouliere 50/3ab4d59b-d3cd-40e4-8386-5f144136cb52.webp" alt="Product 4" class="gallery-image active">
+                    <img src="lv/Keepall Bandouliere 50/26ea582c-bae0-49a4-b270-f327b043bcf8.webp" alt="Product 4" class="gallery-image">
+                    <img src="lv/Keepall Bandouliere 50/1ef9d6cb-c807-41c3-b70d-b4bb4fdb0dc6.webp" alt="Product 4" class="gallery-image">
+                </div>
+                <h3>Keepall Bandoulière 50</h3>
+                <p>An icon since the appearance in 1930, the Keepall embodies the spirit of modern travel. Light, supple and always ready for immediate departure, the bag lives up to its name: those adept at the art of packing can easily fit a week's wardrobe into the generously sized (and cabin-friendly) Keepall 50. Shown here in classic Monogram Canvas, with a strap for casual cross-body wear
+                   <br><br>
+                    29 x 23 x 50 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">12,900 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/walet on chain/e1eeb414-3380-4272-be64-f5dcfc415522.webp" alt="Product 4" class="gallery-image active">
+                    <img src="lv/walet on chain/352abf73-702e-4bc3-bc76-9f562eae3417.webp" alt="Product 4" class="gallery-image">
+                    <img src="lv/walet on chain/fff468d0-14fd-49b7-8be6-04c380d438a8.webp" alt="Product 4" class="gallery-image">
+                </div>
+                <h3>Wallet On Chain Ivy</h3>
+                <p>This elegant design is originally inspired by the House’s Sac Recoleta from the ’00s. A testimony to Louis Vuitton’s savoir-faire, it’s crafted from Monogram Empreinte leather and embellished with a detachable gold-toned chain. The style also comes with a removable and adjustable shoulder strap, and offers plenty of room inside for everyday essentials.
+
+                    <br><br>
+                    12 x 4.3 x 23.5 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">1,987 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ladies Choies. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.product-card').forEach((card) => {
+            const images = card.querySelectorAll('.gallery-image');
+            let currentImageIndex = 0;
+
+            const prevButton = card.querySelector('.prev');
+            const nextButton = card.querySelector('.next');
+
+            function showImage(index) {
+                images.forEach((image, idx) => {
+                    image.classList.remove('active');
+                    if (idx === index) {
+                        image.classList.add('active');
+                    }
+                });
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+                showImage(currentImageIndex);
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+                showImage(currentImageIndex);
+            });
+        });
+    </script>
+</body>
+</html>

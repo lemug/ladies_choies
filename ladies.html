@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #8B5A2B, #D2B48C);
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 3rem;
+        }
+
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: 70px;
+            color: #704214;
+            margin-top: 35px;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #704214;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #D2B48C;
+            min-width: 160px;
+            z-index: 1;
+            text-align: left;
+            padding: 10px 0;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #704214;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #8B5A2B;
+            color: white;
+        }
+
+        hr {
+            width: 90%;
+            border: 1px solid #8B5A2B;
+            margin-top: 0.5rem;
+            margin-bottom: 30px;
+        }
+
+        .products-section {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .products-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #8B5A2B;
+        }
+
+        .product-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #D2B48C;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 90%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin: 1rem 0;
+            color: #8B5A2B;
+            font-size: 1.8rem;
+        }
+
+        .product-card p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #704214;
+            font-size: 1.2rem;
+        }
+
+        .image-gallery {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .gallery-image.active {
+            display: block;
+        }
+
+        .image-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .image-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+        }
+
+        .image-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #704214;
+            color: white;
+            margin-top: 3rem;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <div class="title"><img src="b6296b9d-4d14-4427-9d2f-7a504414eaa1.webp" style="width: 95px; margin-right: 25px; margin-top: 30px;">Ladies Choies</div>
+    <hr> 
+
+    <nav>
+        <a href="ladies.html">Home</a>
+        <a href="about us.html">About Us</a>
+        <a href="coonectus.html">Contact Us</a>
+        <a href="log out.html">Log Out</a>
+
+        
+        <div class="dropdown">
+            <a href="#">Menu</a>
+            <div class="dropdown-content">
+                <a href="lv page.html">LV </a>
+                <a href="dior.html">DIOR</a>
+                <a href="chanel.html">CHANEL</a>
+                <a href="YSL.html">YSl</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <h2  style="font-family: 'Pacifico', cursive;  color: #582e05 ;word-wrap:10px; letter-spacing: 2px; margin: 30px;">Our Featured Products</h2>
+        <div class="product-cards">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/alma bb/4472d2a0-2f85-41c4-bbe6-2cd670c4d29f (2).webp" alt="Product 1" class="gallery-image active">
+                    <img src="lv/alma bb/cf721d69-96fe-42ed-b704-cc65b6067010.webp" alt="Product 1" class="gallery-image">
+                    <img src="lv/alma bb/4a772742-bc7f-40ea-ae97-c1baeb918a34.webp " alt="Product 1" class="gallery-image">
+                </div>
+                <h3>Alma BB</h3>
+                <p>The Alma BB handbag traces its pedigree to the Art Deco original, introduced in 1934. Signature details impart a timeless elegance to this model made from graphic Damier Ebene canvas: note the golden padlock and keys, twin Toron handles and chic leather key bell. Equipped with a removable and adjustable strap, this charming small bag is perfect for cross-body wear.<br>
+                  <br>
+                    17.5 x 11.5 x 23.5 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">7,350 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="Dior/small lady D-JOY/0afb4787-3be9-4848-93e5-4d990fe34257.webp" alt="Product 2" class="gallery-image active">
+                    <img src="Dior/small lady D-JOY/1172e053-0d77-4506-a3a7-e9dfd2be184c.webp" alt="Product 2" class="gallery-image">
+                    <img src="Dior/small lady D-JOY/2545fba2-57b3-458f-ae4b-6270a65928ad.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>Small Lady D-Joy Bag</h3>
+                <p>The Lady D-Joy bag captures the House's vision of elegance and beauty by showcasing the iconic streamlined aesthetic of the Lady Dior line. Crafted in latte lambskin with Cannage stitching, the refined and timeless style is enhanced by pale gold-finish metal D.I.O.R. charms elegantly embellishing its silhouette. Featuring one removable chain strap and another adjustable and removable leather strap, the small Lady D-Joy bag can be carried by hand, worn over the shoulder or crossbody as a daily companion.
+                    <br><br>
+                    Dimensions: 22 x 11.5 x 6 cm / 8.5 x 4.5 x 2.5 inches (Length x Height x Width)
+                </p>
+                <p class="price">3,474 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/Le 5 à 7 Mini leather shoulder bag/STK-20250102-WA0009.webp" alt="Product 1" class="gallery-image active">
+                    <img src="YSL/Le 5 à 7 Mini leather shoulder bag/565f8fd3-13c3-4af4-af9b-476478ec6663.webp" alt="Product 1" class="gallery-image">
+                    <img src="YSL/Le 5 à 7 Mini leather shoulder bag/5bdadd1a-ee36-424d-aec3-0ec1f90790c7.webp " alt="Product 1" class="gallery-image">
+                </div>
+                <h3>Le 5 à 7 Max leather shoulder bag</h3>
+                <p>Saint Laurent creates the aptly named Le 5 à 7 bag for your desk-to-dinner – and beyond – social activities. A shoulder style made from smooth leather, it's the perfect-sized piece for the essentials.
+                    <br><br>
+                    Max. height 11,5cm-4.5"
+
+Max. width 19cm-7.5"
+Depth 4,5cm-2"
+Length of handle 36cm-14"
+                </p>
+                <p class="price">1,175 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/ab150c5e-38b7-4876-a9c0-76ca3dbfe2d3.webp" alt="Product 2" class="gallery-image active">
+                    <img src="chanel/1ea5e144-ddfc-45ff-80bf-d289a984bcee.webp" alt="Product 2" class="gallery-image">
+                    <img src="chanel/fed7fb1e-c04c-414a-a685-0ff4e6902055.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>MINI FLAP BAG</h3>
+                <p>Material : lambskin & lacquered metal 
+                    <br><br>
+                    Dimenions : 4.7 * 7.9 * 2.4 in (cm)
+                </p>
+                <p class="price">6,300 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/LE 5 À 7 SUPPLE SMALL IN GRAINED LEATHER/199ad61e-c7df-48cf-9382-e5934d1f3f46.webp" alt="Product 2" class="gallery-image active">
+                    <img src="YSL/LE 5 À 7 SUPPLE SMALL IN GRAINED LEATHER/64a7e9e2-2a91-4d2b-89de-edfb340c4b31.webp" alt="Product 2" class="gallery-image">
+                    <img src="YSL/LE 5 À 7 SUPPLE SMALL IN GRAINED LEATHER/1d6c84e9-0277-4429-adaa-60c9beee67ea.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>LE 5 À 7 SUPPLE SMALL IN GRAINED LEATHER</h3>
+                <p>SUPPLE VERSION OF THE ICONIC 5 À 7 BAG.<br>
+                    FEATURES FINELY GRAINED LEATHER AND A TONAL SUEDE LINING.<br>
+                    SPACIOUS, FEATURING A LEATHER TAB WITH THE CASSANDRE AND AN INTERIOR ZIPPED POCKET
+                    ADJUSTABLE SHOULDER STRAP.<br>
+                    <br><br>
+                    DIMENSIONS: 9 X 8.6 X 3.3 INCHES
+                    STRAP DROP: 8.3 INCHES
+                    </p>
+                <p class="price">2,650 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 6-->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="Dior/dior saddel/STK-20241231-WA0029.webp" alt="Product 2" class="gallery-image active">
+                    <img src="Dior/dior saddel/08953af0-b74e-44ca-a13d-1ea3c3737221.webp" alt="Product 2" class="gallery-image">
+                    <img src="Dior/dior saddel/6e069ec3-1f84-4684-9ab8-d569af01ffd1.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>Saddle Bag with Strap</h3>
+                <p>Maria Grazia Chiuri brings a fresh update to the iconic Saddle bag. Crafted in Dior Oblique denim embroidered with gold-tone metallic thread, the latte smooth calfskin Saddle flap features a D stirrup strap and magnetic pull, as well as an antique gold-finish metal CD signature on either side of the handle. Equipped with a thin, adjustable and removable strap, the Saddle bag can be carried by hand, worn over the shoulder or crossbody.
+                    <br><br>
+                    Dimensions: 25.5 x 20 x 6.5 cm / 10 x 8 x 2.5 inches (Length x Height x Width)
+                </p>
+                <p class="price">3,192 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/sunset/cabb150d-679c-4e1f-8907-05153f554245.webp" alt="Product 2" class="gallery-image active">
+                    <img src="lv/sunset/543fc5ea-4377-4115-b356-392f675d1eaf.webp" alt="Product 2" class="gallery-image">
+                    <img src="lv/sunset/5b38cd07-0a07-4dd7-bb02-0f70842a0361.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3> The Sunset</h3>
+                <p>The Sunset handbag is made from Monogram Denim canvas and is adorned with the House's tuck lock. Creating Monogram Denim is a multi-step process. First the Monogram pattern is woven into the Global Organic Textile Standard-certified cotton which is then bleached. Once assembled, each bag is stonewashed to give it a unique aspect. The Sunset can also be styled for cross-body wear, thanks to an extra extension strap included with the piece.
+                      <br><br>
+                    18 x 3 x 27 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">1,893 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 8-->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/4156781f-bd4e-4a8b-add8-500774bbad3f.webp" alt="Product 3" class="gallery-image active">
+                    <img src="chanel/97584e22-6f8c-472a-be87-a759ed039051.webp" alt="Product 3" class="gallery-image">
+                    <img src="chanel/21222224-39b7-4b77-9291-3869b5f9b7c7.webp" alt="Product 3" class="gallery-image">
+                </div>
+                <h3>MINI CAMERA CASE </h3>
+                <p>Material : shiny lambskin & gold tone metal <br><br>
+                Dimensions : 5.1 * 7.5 * 2.4 in (cm)</p>
+                <p class="price">5,400 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="lv/walet on chain/e1eeb414-3380-4272-be64-f5dcfc415522.webp" alt="Product 4" class="gallery-image active">
+                    <img src="lv/walet on chain/3b84b21a-f356-46d1-bc2b-e3e1d643e161.webp" alt="Product 4" class="gallery-image">
+                    <img src="lv/walet on chain/c8ccb83a-9708-4af5-9aca-749c064d459d.webp" alt="Product 4" class="gallery-image">
+                </div>
+                <h3>Wallet On Chain Ivy</h3>
+                <p>This elegant design is originally inspired by the House’s Sac Recoleta from the ’00s. A testimony to Louis Vuitton’s savoir-faire, it’s crafted from Monogram Empreinte leather and embellished with a detachable gold-toned chain. The style also comes with a removable and adjustable shoulder strap, and offers plenty of room inside for everyday essentials.
+
+                    <br><br>
+                    12 x 4.3 x 23.5 cm
+                    ( Height x Width x Length )</p>
+                <p class="price">1,987 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ladies Choies. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.product-card').forEach((card) => {
+            const images = card.querySelectorAll('.gallery-image');
+            let currentImageIndex = 0;
+
+            const prevButton = card.querySelector('.prev');
+            const nextButton = card.querySelector('.next');
+
+            function showImage(index) {
+                images.forEach((image, idx) => {
+                    image.classList.remove('active');
+                    if (idx === index) {
+                        image.classList.add('active');
+                    }
+                });
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+                showImage(currentImageIndex);
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+                showImage(currentImageIndex);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+

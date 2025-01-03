@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chanel collection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #8B5A2B, #D2B48C);
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 3rem;
+        }
+
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: 70px;
+            color: #704214;
+            margin-top: 35px;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #704214;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+      
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #D2B48C;
+            min-width: 160px;
+            z-index: 1;
+            text-align: left;
+            padding: 10px 0;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #704214;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #8B5A2B;
+            color: white;
+        }
+
+        hr {
+            width: 90%;
+            border: 1px solid #8B5A2B;
+            margin-top: 0.5rem;
+            margin-bottom: 30px;
+        }
+
+        .products-section {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .products-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #8B5A2B;
+        }
+
+        .product-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #D2B48C;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 90%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin: 1rem 0;
+            color: #8B5A2B;
+            font-size: 1.8rem;
+        }
+
+        .product-card p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #704214;
+            font-size: 1.2rem;
+        }
+
+        .image-gallery {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .gallery-image.active {
+            display: block;
+        }
+
+        .image-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .image-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+        }
+
+        .image-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #704214;
+            color: white;
+            margin-top: 3rem;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <div class="title"><img src="b6296b9d-4d14-4427-9d2f-7a504414eaa1.webp" style="width: 95px; margin-right: 25px; margin-top: 30px;">Ladies Choies</div>
+    <hr> 
+
+    <nav>
+        <a href="ladies.html">Home</a>
+        <a href="about us.html">About Us</a>
+        <a href="coonectus.html">Contact Us</a>
+        <a href="log out.html">Log Out</a>
+
+        
+        <div class="dropdown">
+            <a href="#">Menu</a>
+            <div class="dropdown-content">
+                <a href="lv page.html">LV </a>
+                <a href="dior.html">DIOR</a>
+                <a href="chanel.html">CHANEL</a>
+                <a href="YSL.html">YSl</a>
+                
+               
+            </div>
+        </div>
+    </nav>
+
+   
+    <section class="products-section">
+        <h2 style="font-family: 'Pacifico', cursive;  color: #582e05 ;word-wrap:10px; letter-spacing: 2px; margin: 30px;"><img src="chanel/22e76814-e72d-4f72-a380-a3a4c6e2feba.webp" style="width:60px; margin-right: 10px; margin-top: 5px;">THE CHANEL COLLECTION</h2>
+        <div class="product-cards">
+
+           
+
+            
+            
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/4d1b58cd-c5c8-425b-8234-1e3f505317b7 (2).webp" alt="Product 1" class="gallery-image active">
+                    <img src="chanel/4156781f-bd4e-4a8b-add8-500774bbad3f.webp" alt="Product 1" class="gallery-image">
+                    
+                </div>
+                <h3>MINI CAMERA CASE </h3>
+                <p>Material : shiny lambskin & gold tone metal <br><br>
+                Dimensions : 5.1 * 7.5 * 2.4 in (cm)</p>
+                <p class="price">5,400 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/ab150c5e-38b7-4876-a9c0-76ca3dbfe2d3.webp" alt="Product 2" class="gallery-image active">
+                    <img src="chanel/40351acb-2783-46ec-9d40-813f32283dbd.webp" alt="Product 2" class="gallery-image">
+                    <img src="chanel/0653dca6-4dda-4231-a929-8dd0e7a59a51.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>MINI FLAP BAG</h3>
+                <p>Material : lambskin & lacquered metal 
+                    <br><br>
+                    Dimenions : 4.7 * 7.9 * 2.4 in (cm)
+                </p>
+                <p class="price">6,300 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/4ac108a1-0b71-49a0-84fd-019094b9faf6.webp" alt="Product 3" class="gallery-image active">
+                    <img src="chanel/d1352b38-36fe-4cb0-8510-09bbbac18e25.webp" alt="Product 3" class="gallery-image">
+                    <img src="chanel/178d7a03-9cbe-41bd-9d06-9987450a878e.webp" alt="Product 3" class="gallery-image">
+                </div>
+                <h3>CHANEL 22 HANDBAG </h3>
+                <p>Material : matalic calfskin & gold metal <br><br>
+                Dimensions : 7.9 * 7.5 * 2.4 in (cm) </p>
+                <p class="price"></p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/a6f4c096-0feb-4c18-af17-9c9014ca822d.webp" alt="Product 4" class="gallery-image active">
+                    <img src="chanel/584b5049-0164-4d8c-93e1-3b30b6e3d193.webp" alt="Product 4" class="gallery-image">
+                    <img src="chanel/29df6bb8-defd-4065-b744-e6efa815216e.webp" alt="Product 4" class="gallery-image">
+                </div>
+                <h3>SMALL BOY CHANEL HANDBAG</h3>
+                <p>Material : shiny grained calfskin & silver - tone metal<br><br>
+                Dimensions : 4.7 * 8.1 * 3.3 in (cm) 
+            </p>
+                <p class="price">6,400 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/d292aaf0-4905-48d3-9479-ed6009b61fb2.webp" alt="Product 5" class="gallery-image active">
+                    <img src="chanel/331ace40-369c-42fa-ab5a-09f1f886d2d9.webp" alt="Product 5" class="gallery-image">
+                    <img src="chanel/75c045b3-371c-476e-9df8-33f7e9a0cc2c.webp" alt="Product 5" class="gallery-image">
+                </div>
+                <h3> CLASSIC 11.12 HANDBAG</h3>
+                <p>Material : grained shiny calfskin & gold - tone metal <br><br>
+                Dimensions : 6.1 * 10 * 2.6 in (cm)</p>
+                <p class="price">10,800 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/c0a1d24f-ab90-4c49-a5c0-b258869c4261.webp" alt="Product 6" class="gallery-image active">
+                    <img src="chanel/46b0bb54-e4f8-40c9-b7c3-120694ac5589.webp" alt="Product 6" class="gallery-image">
+                 </div>
+                <h3>CLUTCH</h3>
+                <p>Materials :  metallic lambskin & silver - tone metal silver <br><br>
+                Dimenions : 5.9 * 8.7 * 1.6 in (cm) </p>
+                <p class="price"></p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/f7be125d-c7a2-4a21-82fb-3e3fb1e7c3fc.webp" alt="Product 7" class="gallery-image active">
+                    <img src="chanel/bd1721b2-a559-4cf7-810d-ebef4e21f7ab.webp" alt="Product 7" class="gallery-image">
+                    <img src=" chanel/94c25155-a2bc-4d08-a334-a44c70af1031.webp" alt="Product 7" class="gallery-image">
+                </div>
+                <h3>FLAP BAG</h3>
+                <p>Material : sequins & gold - tone metal <br><br>
+                Dimensions : 5.5 * 8.3 * 3.1 in (cm )</p>
+                <p class="price">7,600 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/59be56cc-ebab-4f30-a27e-e72dbab14b65.webp" alt="Product 8" class="gallery-image active">
+                    <img src="chanel/4ff3bdb0-250d-48aa-8fb6-a01b58736ec0.webp" alt="Product 8" class="gallery-image">
+                </div>
+                <h3>SHOPPING BAG </h3>
+                <p> Material : mixed fibers , calfskin & gold - tone metal <br><br> 
+                Dimensions : 10.2 * 16.1 * 6.7 in (cm)</p>
+                <p class="price">4,700 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="chanel/fdbbe6c2-993f-4046-a4cc-a5551ea88c18.webp" alt="Product 9" class="gallery-image active">
+                    <img src="chanel/c4201121-d183-4851-848d-5148429af4dc.webp" alt="Product 9" class="gallery-image">
+                </div>
+                <h3>BACKPACK </h3>
+                <p> Material : shiny lambskin &ngold - tone metal <br><br>
+                Dimensions : 9.6 * 7.1 * 3.1 in (cm ) </p>
+                <p class="price">5,800 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ladies Choies. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.product-card').forEach((card) => {
+            const images = card.querySelectorAll('.gallery-image');
+            let currentImageIndex = 0;
+
+            const prevButton = card.querySelector('.prev');
+            const nextButton = card.querySelector('.next');
+
+            function showImage(index) {
+                images.forEach((image, idx) => {
+                    image.classList.remove('active');
+                    if (idx === index) {
+                        image.classList.add('active');
+                    }
+                });
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+                showImage(currentImageIndex);
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+                showImage(currentImageIndex);
+            });
+        });
+    </script>
+</body>
+</html>

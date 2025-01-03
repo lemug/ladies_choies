@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prada collection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #8B5A2B, #D2B48C);
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 3rem;
+        }
+
+        .title {
+            font-family: 'Pacifico', cursive;
+            font-size: 70px;
+            color: #704214;
+            margin-top: 35px;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #704214;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* For the dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #D2B48C;
+            min-width: 160px;
+            z-index: 1;
+            text-align: left;
+            padding: 10px 0;
+            border-radius: 8px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #704214;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #8B5A2B;
+            color: white;
+        }
+
+        hr {
+            width: 90%;
+            border: 1px solid #8B5A2B;
+            margin-top: 0.5rem;
+            margin-bottom: 30px;
+        }
+
+        .products-section {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .products-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #8B5A2B;
+        }
+
+        .product-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: #D2B48C;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 90%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin: 1rem 0;
+            color: #8B5A2B;
+            font-size: 1.8rem;
+        }
+
+        .product-card p {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #704214;
+            font-size: 1.2rem;
+        }
+
+        .image-gallery {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .gallery-image.active {
+            display: block;
+        }
+
+        .image-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .image-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+        }
+
+        .image-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #704214;
+            color: white;
+            margin-top: 3rem;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <div class="title"><img src="b6296b9d-4d14-4427-9d2f-7a504414eaa1.webp" style="width: 95px; margin-right: 25px; margin-top: 30px;">Ladies Choies</div>
+    <hr> 
+
+    <nav>
+        <a href="ladies.html">Home</a>
+        <a href="about us.html">About Us</a>
+        <a href="coonectus.html">Contact Us</a>
+        <a href="log out.html">Log Out</a>
+
+        
+        <div class="dropdown">
+            <a href="#">Menu</a>
+            <div class="dropdown-content">
+                <a href="lv page.html">LV </a>
+                <a href="dior.html">DIOR</a>
+                <a href="chanel.html">CHANEL</a>
+                <a href="YSL.html">YSl</a>
+                
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <h2  style="font-family: 'Pacifico', cursive;  color: #582e05 ;word-wrap:10px; letter-spacing: 2px; margin: 30px;"><img src="YSL/caef832a-8886-45a9-bd10-e32a808c0073.webp" style="width:60px; margin-right: 10px; margin-top: 5px;">THE SAINT Laurent COLLECTION</h2>
+        <div class="product-cards">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/Le 5 à 7 Mini leather shoulder bag/STK-20250102-WA0009.webp" alt="Product 1" class="gallery-image active">
+                    <img src="YSL/Le 5 à 7 Mini leather shoulder bag/5af17bbd-29cc-4828-bf7c-34303df7fb5f.webp" alt="Product 1" class="gallery-image">
+                    <img src="YSL/Le 5 à 7 Mini leather shoulder bag/689f4142-44da-4096-9515-62914426e338.webp " alt="Product 1" class="gallery-image">
+                </div>
+                <h3>Le 5 à 7 Max leather shoulder bag</h3>
+                <p>Saint Laurent creates the aptly named Le 5 à 7 bag for your desk-to-dinner – and beyond – social activities. A shoulder style made from smooth leather, it's the perfect-sized piece for the essentials.
+                    <br><br>
+                    Max. height 11,5cm-4.5"<br>
+
+Max. width 19cm-7.5"<br>
+Depth 4,5cm-2"<br>
+Length of handle 36cm-14"<br>
+                </p>
+                <p class="price">1,175 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/LE 5 À 7 SUPPLE SMALL IN GRAINED LEATHER/199ad61e-c7df-48cf-9382-e5934d1f3f46.webp" alt="Product 2" class="gallery-image active">
+                    <img src="YSL/LE 5 À 7 SUPPLE SMALL IN GRAINED LEATHER/835d5e22-059a-4cc4-9bbd-4ca7fddf93a5.webp" alt="Product 2" class="gallery-image">
+                    <img src="YSL/LE 5 À 7 SUPPLE SMALL IN GRAINED LEATHER/e51d4bf5-b679-4c04-b280-d60696deaaf7.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>LE 5 À 7 SUPPLE SMALL IN GRAINED LEATHER</h3>
+                <p>SUPPLE VERSION OF THE ICONIC 5 À 7 BAG.<br>
+                    FEATURES FINELY GRAINED LEATHER AND A TONAL SUEDE LINING.<br>
+                    SPACIOUS, FEATURING A LEATHER TAB WITH THE CASSANDRE AND AN INTERIOR ZIPPED POCKET
+                    ADJUSTABLE SHOULDER STRAP.<br>
+                    <br><br>
+                    DIMENSIONS: 9 X 8.6 X 3.3 INCHES<br>
+                    STRAP DROP: 8.3 INCHES
+                    </p>
+                <p class="price">2,650 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 3-->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/GABY VANITY BAG IN PATENT LEATHER/a3209aac-baea-4f50-bb9b-9285631267d0.webp" alt="Product 2" class="gallery-image active">
+                    <img src="YSL/GABY VANITY BAG IN PATENT LEATHER/1b1e4b41-cc56-44e8-8794-0d144b27ac90.webp" alt="Product 2" class="gallery-image">
+                    <img src="YSL/GABY VANITY BAG IN PATENT LEATHER/24e83232-a25d-41db-af9f-e9f864dd1b03.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>GABY VANITY BAG IN PATENT LEATHER</h3>
+                <p>ZIP-AROUND VANITY BAG DECORATED WITH THE CASSANDRE AND DIAMOND-QUILTED OVERSTITCHING.<br>
+                    THIS VERSATILE PIECE IS FULLY LINED IN LEATHER AND PROVIDES BESPOKE CARRY OPTIONS WITH AN ADJUSTABLE AND DETACHABLE STRAP.<br>
+                    <br><br>
+                    DIMENSIONS: 18 X 11 X 6.5 CM / 7.1" X 4.3" X 2.6"<br>
+                    STRAP DROP: 52 CM / 20.5"<br>
+                    HANDLE DROP: 5 CM / 2"</p>
+                <p class="price">2,200 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/EVENING POUCH IN LAMBSKIN/1566f6c5-a841-4696-aaad-1eb5d1e4f444.webp" alt="Product 2" class="gallery-image active">
+                    <img src="YSL/EVENING POUCH IN LAMBSKIN/1566f6c5-a841-4696-aaad-1eb5d1e4f444.webp" alt="Product 2" class="gallery-image">
+                    <img src="YSL/EVENING POUCH IN LAMBSKIN/bcf50b95-ba81-4931-9b9b-3b4088543fe6.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>EVENING POUCH IN LAMBSKIN</h3>
+                <p>SUPPLE POUCH FEATURING A RING CLOSURE WITH A CASSANDRE CHARM AND A HAND STRAP.<br><br>
+                    DIMENSIONS: 17 X 27,5 X 6 CM<br>
+                    HANDLE DROP: 10,5 CM</p>
+                <p class="price">2,300 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/MINI VOLTAIRE IN BOX SAINT LAURENT/3b265c0c-7a85-4136-a8f6-bdaa398ae282.webp" alt="Product 2" class="gallery-image active">
+                    <img src="YSL/MINI VOLTAIRE IN BOX SAINT LAURENT/48c6e696-f289-4149-b5cd-edd96bc6eadc.webp" alt="Product 2" class="gallery-image">
+                    <img src="YSL/MINI VOLTAIRE IN BOX SAINT LAURENT/f3d17767-25f7-4b08-afb5-df7b2c8a0303.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>MINI VOLTAIRE IN BOX SAINT LAURENT</h3>
+                <p>HALF-MOON SHOULDER BAG IN CALFSKIN WITH A GENTLY POLISHED FINISH.
+                    THIS ELEGANT AND MODERN BAG FEATURES A FLAP WITH CASSANDRE HINGE CLOSURE.<br><br>
+                    DIMENSIONS: 21 X 11 X 4.5 CM / 8.3" X 4.3" X 1.8"<br>
+                    HANDLE DROP: 24 CM / 9.4"</p>
+                <p class="price">2,000 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/VOLTAIRE TOP HANDLE IN BOX SAINT LAURENT/c2b14f88-d96d-454d-9c78-3d2a91f7fbba.webp" alt="Product 2" class="gallery-image active">
+                    <img src="YSL/VOLTAIRE TOP HANDLE IN BOX SAINT LAURENT/85ab3d74-b7ce-4ec1-bc00-1eae81135164.webp" alt="Product 2" class="gallery-image">
+                    <img src="YSL/VOLTAIRE TOP HANDLE IN BOX SAINT LAURENT/a5ab95d4-1f4f-462d-afc5-07ef9aa493eb.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>VOLTAIRE TOP HANDLE IN BOX SAINT LAURENT</h3>
+                <p>VOLTAIRE TOP-HANDLE IN BOX SAINT LAURENT LEATHER, DECORATED WITH THE CASSANDRE.<br>
+                    THIS MODERN AND STRUCTURED BAG FEATURES AN ADJUSTABLE HANDLE FOR HAND OR SHOULDER CARRY.<br><br>
+                    DIMENSIONS: 17.5 X 21 X 8 CM / 6.9" X 8.3" X 3.1"<br>
+                    HANDLE DROP: 14–23.5 CM / 5.5–9.3"</p>
+                <p class="price">2,100 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/LOULOU MEDIUM IN MATELASSÉ LAMBSKIN/73bb30b9-b3c9-45c6-ba45-ec49c4f7eaf8.webp" alt="Product 2" class="gallery-image active">
+                    <img src="YSL/LOULOU MEDIUM IN MATELASSÉ LAMBSKIN/077ce47b-6455-4769-96be-9bb6f0020854.webp" alt="Product 2" class="gallery-image">
+                    <img src="YSL/LOULOU MEDIUM IN MATELASSÉ LAMBSKIN/309d47b2-b93c-43af-82f5-3ddad333745c.webp" alt="Product 2" class="gallery-image">
+                </div>
+                <h3>LOULOU MEDIUM IN MATELASSÉ LAMBSKIN</h3>
+                <p>CHAIN BAG IN SOFT LAMBSKIN WITH CHEVRON-QUILTED TOPSTITCHING.<br>
+                    THIS BAG FEATURES A REMOVABLE LEATHER POUCH AND POCKET MIRROR.<br>
+                    FINISHED WITH A SLIDING CHAIN STRAP, THE BAG MAY BE WORN ON THE SHOULDER OR CROSSBODY.<br><br>
+                    DIMENSIONS: 29 X 17 X 8 CM / 11.4" X 6.7" X 3.1"<br>
+                    SINGLE STRAP DROP: 45 CM / 17.7"<br>
+                    DOUBLED STRAP DROP: 22 CM / 8.7"<br></p>
+                <p class="price">2,900 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/CALYPSO LARGE IN GRAINED LAMBSKIN/fe89f08a-8c05-461b-a4cc-242fb6e1f85d.webp" alt="Product 3" class="gallery-image active">
+                    <img src="YSL/CALYPSO LARGE IN GRAINED LAMBSKIN/fb60bab9-a0ed-4156-96ab-050ada9d0568.webp" alt="Product 3" class="gallery-image">
+                    <img src="YSL/CALYPSO LARGE IN GRAINED LAMBSKIN/1b708c86-5ca6-4218-a4c2-772ded375e6f.webp" alt="Product 3" class="gallery-image">
+                </div>
+                <h3>CALYPSO LARGE IN GRAINED LAMBSKIN</h3>
+                <p>SAINT LAURENT'S NEW SIGNATURE ENVELOPE BAG.<br>
+                    MADE OF FINE-GRAINED LEATHER WITH PADDED QUILTING.<br>
+                    THIS LARGE VERSION IS ELEVATED BY A SLIDING CURB CHAIN.<br>
+                    SOFT AND SPACIOUS, IT IS THE IDEAL SIZE FOR EVERYDAY USE.<br><br>
+                    DIMENSIONS: 28 X 22 X 12 CM / 11" X 8.7" X 4.7"<br>
+STRAP DROP: 43 CM / 16.9"
+                </p>
+                <p class="price">3,500 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/KATE SMALL IN PATENT LEATHER/15f54e92-83e8-4f81-9777-e24c74dd2fe0.webp" alt="Product 4" class="gallery-image active">
+                    <img src="YSL/KATE SMALL IN PATENT LEATHER/5d42129b-a33a-499f-9680-57304cb1e88d.webp" alt="Product 4" class="gallery-image">
+                    <img src="YSL/KATE SMALL IN PATENT LEATHER/40dc0b2b-fc8d-4747-bb05-2d953e909886.webp" alt="Product 4" class="gallery-image">
+                </div>
+                <h3>KATE SMALL IN PATENT LEATHER</h3>
+                <p>SHOULDER BAG ADORNED WITH A CURB CHAIN AND METAL CASSANDRE.<br><br>
+                    DIMENSIONS: 20 X 12,5 X 5 CM<br>
+                    SHOULDER STRAP DROP: 56 CM</p>
+                <p class="price">2,250 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+             <!-- Product 10 -->
+             <div class="product-card">
+                <div class="image-gallery" style="align-items: center;">
+                    <img src="YSL/MIDNIGHT SMALL CLUTCH IN SATIN/WhatsApp Image 2025-01-02 at 17.45.43_de9694ea.jpg" alt="Product 4" class="gallery-image active" style="margin-top: 60px; margin-left: 18px;">
+                    <img src="YSL/MIDNIGHT SMALL CLUTCH IN SATIN/WhatsApp Image 2025-01-02 at 17.46.25_118919fc.jpg" alt="Product 4" class="gallery-image" style="margin-top: 60px; margin-left: 18px;">
+                    <img src="YSL/MIDNIGHT SMALL CLUTCH IN SATIN/WhatsApp Image 2025-01-02 at 17.46.55_c481869d.jpg" alt="Product 4" class="gallery-image" style="margin-top: 60px; margin-left: 18px;">
+                </div>
+                <h3>MIDNIGHT SMALL CLUTCH IN SATIN</h3>
+                <p>THIN CLUTCH CASE WITH A KISS-LOCK CLOSURE EMBOSSED WITH THE SAINT LAURENT PARIS SIGNATURE.<br>
+                    FEATURING A STOWABLE CHAIN SHOULDER STRAP.<br><br>
+                    DIMENSIONS: 26 X 10 X 1.5–4 CM / 10.2" X 3.9" X 0.6–1.6"<br>
+                    STRAP DROP: 28 CM / 11</p>
+                <p class="price">1,950 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+             <!-- Product 11-->
+             <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/Y TOTE IN LEATHER/249140d2-ffda-4848-aaa4-783c7747d30c.webp" alt="Product 4" class="gallery-image active">
+                    <img src="YSL/Y TOTE IN LEATHER/637c349a-1d56-48a9-8c1a-4516d840bb69.webp" alt="Product 4" class="gallery-image">
+                 </div>
+                <h3>Y TOTE IN LEATHER</h3>
+                <p> TOTE IN FINELY GRAINED LEATHER, FULLY LINED IN TONAL SUEDE.<br>
+                    DECORATED WITH A SUBTLE Y STITCHED SIGNATURE, INSPIRED BY THE HOUSE’S ARCHIVES.<br>
+                    THIS SPACIOUS, LIGHTWEIGHT SHOPPING BAG FEATURES AN INNER ZIP POCKET AND HOOK CLOSURE.<br><br>
+                    DIMENSIONS: 37 X 32 X 7–22 CM / 14.6 " X 12.6" X 2.8–8.7"<br>
+                    STRAP DROP: 26 CM / 10.2"</p>
+                <p class="price">3,600 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+             <!-- Product 12 -->
+             <div class="product-card">
+                <div class="image-gallery">
+                    <img src="YSL/ICARE MAXI SHOPPING BAG IN QUILTED LAMBSKIN/1ed27365-34be-4108-9f5f-6f9295dee7a7.webp" alt="Product 4" class="gallery-image active">
+                    <img src="YSL/ICARE MAXI SHOPPING BAG IN QUILTED LAMBSKIN/1fbeba4b-14da-401b-b795-6769a364b660.webp" alt="Product 4" class="gallery-image">
+                    <img src="YSL/ICARE MAXI SHOPPING BAG IN QUILTED LAMBSKIN/9804147e-bbc9-4276-b2af-61bc60b13518.webp" alt="Product 4" class="gallery-image">
+                </div>
+                <h3>ICARE MAXI SHOPPING BAG IN QUILTED LAMBSKIN</h3>
+                <p>MAXI SHOPPING BAG MADE IN A HAND-EMBROIDERED NATURAL RAFFIA.<br>
+                    THIS TECHNIQUE REQUIRES THE FINEST SAVOIR-FAIRE AND SPECIALIZED CRAFTSMANSHIP.<br>
+                    ADORNED WITH AN OVERSIZED, SCULPTURED CASSANDRE, ITS INNER CHAIN CAN BE USED TO ADJUST THE SIDES.<br>
+                    IT FEATURES A RAFFIA SUNGLASSES CASE WHICH CAN BE REMOVED THANKS TO ITS LONG CHAIN.<br><br>
+                    DIMENSIONS: 37–55 X 43 X 5 CM / 14.6"–21.7" X 16.9" X 2"<br>
+                    HANDLE DROP: 22 CM / 8.7"</p>
+                <p class="price">4,900 JD</p>
+                <div class="image-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ladies Choies. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.product-card').forEach((card) => {
+            const images = card.querySelectorAll('.gallery-image');
+            let currentImageIndex = 0;
+
+            const prevButton = card.querySelector('.prev');
+            const nextButton = card.querySelector('.next');
+
+            function showImage(index) {
+                images.forEach((image, idx) => {
+                    image.classList.remove('active');
+                    if (idx === index) {
+                        image.classList.add('active');
+                    }
+                });
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+                showImage(currentImageIndex);
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+                showImage(currentImageIndex);
+            });
+        });
+    </script>
+</body>
+</html>
